@@ -79,10 +79,10 @@ class ResumeParser:
     
     def _clean_text(self, text: str) -> str:
         """Clean and normalize resume text"""
-        # Remove excessive whitespace
-        text = re.sub(r'\s+', ' ', text)
         # Remove special characters but keep important punctuation
         text = re.sub(r'[^\w\s@.\-+(),:;]', ' ', text)
+        # Remove excessive whitespace (do this after special character removal)
+        text = re.sub(r'\s+', ' ', text)
         return text.strip()
     
     def _extract_sections(self, text: str) -> Dict[str, str]:
