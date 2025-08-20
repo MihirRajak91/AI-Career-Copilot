@@ -1,5 +1,3 @@
-
-
 # 🗺️ AI Career Copilot Development Roadmap
 
 ## Phase 1: Foundation & Core Parsing (Week 1-2)
